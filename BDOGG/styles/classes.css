@@ -1,0 +1,68 @@
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #3B3B3B;
+}
+
+.active {
+  background-color: #FF4949 ;
+}
+
+li {
+  float: right;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+img.left {
+    float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  font-family: 'Kanit', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 15px;
+  padding: 18px 30px;
+  text-decoration: none;
+}
+
+hr.main {
+  border: 2px solid rgb(73, 73, 73);
+  border-radius: 5px;
+}
+
+h1 {
+  font-family: 'Kanit', sans-serif;
+  font-style: normal ;
+  font-weight: normal;
+  font-size: 48px;
+  text-align: center;
+}
+
+p {
+  font-family: 'Kanit', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 35px;
+  line-height: 72px;
+  text-align: center;
+}
+
+#center {
+    text-align: center;
+}
+
+#table_pic td{
+    padding: 40px;
+}

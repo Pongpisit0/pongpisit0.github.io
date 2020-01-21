@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <title>click-count</title>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+          var numClicks = 1;
+        function createParagraph() {
+          var para = document.getElementById('Num');
+          document.body.appendChild(para);
+          if (numClicks == 1) {
+              para.textContent = 'You clicked the button for ' + numClicks;
+              para.textContent += " time";
+          } else {
+              para.textContent = 'You clicked the button for ' + numClicks;
+              para.textContent += " times";
+          }
+          numClicks ++;
+        }
+        var buttons = document.querySelectorAll('button');
+        for(var i = 0; i < buttons.length ; i++) {
+          buttons[i].addEventListener('click', createParagraph);
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <button>Click me</button>
+    <p id = 'Num'></p>
+  </body>
+</html>

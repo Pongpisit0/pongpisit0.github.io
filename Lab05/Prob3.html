@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <link href="https://fonts.googleapis.com/css?family=Kanit&display=swap" rel="stylesheet">
+
+    <title>Simple words generator</title>
+
+    <style>
+        body {
+            font-family: 'Kanit', sans-serif;
+            width: 350px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        div {
+            padding-bottom: 20px;
+        }
+
+        input[type="text"] {
+            padding: 5px;
+            width: 150px;
+        }
+
+        p {
+            background: rgb(255, 232, 29);
+            color: rgb(0, 0, 0);
+            padding: 10px;
+            visibility: hidden;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div>
+        <label for="customname">Enter student name:</label>
+        <input id="customname" type="text" placeholder="">
+    </div>
+    <div>
+        <label for="eng">English</label><input id="radioeng" type="radio" name="ength" value="eng" checked>
+        <label for="th">Thai</label><input id="radioth" type="radio" name="ength" value="th">
+    </div>
+    <div>
+        <button class="randomize">Generate random words</button>
+    </div>
+
+    <p id="words"></p>
+</body>
+
+<script>
+    var button = document.querySelector('button');
+    var radioEng = document.getElementById('radioeng').value;
+    var radioEng = document.getElementById('radioeng');
+    var textname = document.getElementById('customname');
+    var radioeng = document.getElementById('radioeng');
+    var radioth = document.getElementById('radioth');
+    var display = document.getElementById("words");
+
+    let engwords = ['cute', 'beautiful', 'kind', 'good']
+    let thwords = ["น่ารัก", "สวย", "ใจดี", "เก่ง"]
+
+    function randomarray(array) {
+        const random = Math.floor(Math.random() * array.length);
+        return array[random];
+    }
+
+    button.onclick = function () {
+        if (radioEng.checked == true) {
+            display.textContent = textname.value + ' is ' + randomarray(engwords);
+        } else if (radioth.checked == true) {
+            display.textContent = textname.value + ' เป็นคน' + randomarray(thwords);
+        }
+
+    display.style.visibility = 'visible';
+  
+    }
+
+</script>
+
+</html>

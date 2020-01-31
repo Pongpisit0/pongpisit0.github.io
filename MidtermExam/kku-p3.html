@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="kku.css"> 
+    <title>Khon Kaen University</title>
+</head>
+
+<body>
+
+    <h1>Khon Kaen University</h1>
+
+    <h2>มหาวิทยาลัยขอนแก่น</h2>
+    <img src="images/kku.jpg" id="kku" width="200" alt="kku" class="center">
+    <br><br>
+    <p1>It is a public research university in Thailand. It was the <b><i>first</i> university
+        established in northeastern Thailand</b> and remains the oldest and largest university 
+        in the region</p1>
+
+    <h3 id="motto">Motto</h3>
+    <p2>Motto "วิทยา จริยา ปัญญา" (both Thai and Pali)<br>
+        Motto in English "Knowledge, Virtues, Wisdom"</p2>
+
+    <h3>Faculties and colleges</h3>
+    <p3>
+        <ul id="list">
+            <li>Faculty of Engineering</li>
+            <li>Faculty of Agriculture</li>
+            <li>Faculty of Medicine</li>
+        </ul>
+    </p3>
+
+    <h3>Top researchers</h3>
+    <p4>According to the number of citations at <a href="https://scholar.google.com/citations"> Google Scholar Citations</a>
+        <ol id="rl">
+            <li>Professor Prinya Chindaprasirt</li>
+            <li>Professor Paiboon Sithithaworn</li>
+            <li>Professor Metha Wanapat</li>
+        </ol>
+
+    </p4>
+
+    <h3>KKU Presidents from Past to Present</h3>
+    <table style="widows: 100px;">
+        <tr>
+            <td><img src="images/01-poj-s.jpg"></td>
+            <td>ฯพณฯ พจน์ สารสิน<br>
+            14 มิถุนายน 2509 - 9 เมษายน 2512</td>
+        </tr>
+        <tr>
+            <td><img src="images/02-pimon-s.jpg"></td>
+            <td>ศ.พิมล กลกิจ<br>
+            10 เมษายน 2512 - 2 กันยายน 2512* <br>
+            3 กันยายน 2512 - 2 กันยายน 2518</td>
+        </tr>
+
+</body>
+<script>
+    var node = document.createElement("LI");               
+    var textnode = document.createTextNode("Faculty of Education");
+    node.appendChild(textnode);                            
+    document.getElementById("list").appendChild(node);
+
+    var elmnt = document.createElement("li");
+    var textnode = document.createTextNode("Professor Prinya Chindaprasirt (Civil Engineering)");
+    elmnt.appendChild(textnode);
+    var item = document.getElementById("rl");
+    item.replaceChild(elmnt, item.childNodes[1]);
+
+    document.getElementById("kku").src = "images/kku3.jpg";
+       
+</script>
+
+</html>

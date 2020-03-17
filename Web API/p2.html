@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Simple DOM example</title>
+</head>
+
+<body>
+    <section>
+        <img src="dinosaur.png" alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human, with small arms, and a large head with lots of sharp teeth." />
+        <p>
+            Here we will add a link to the
+            <a href="https://www.mozilla.org/%22%3EMozilla homepage">
+        </p>
+    </section>
+
+    <script>
+        var btn = document.querySelector("p")
+        var image = document.querySelector("img")
+
+        image.src = "images/en-kku.jpg"
+
+        btn.style.backgroundColor = "black"
+        btn.style.color = "white"
+        btn.style.padding = "10px"
+        btn.style.height = "200px"
+        btn.style.height = "20px"
+        btn.style.textAlign = "center"
+        btn.innerHTML = "We hope you enjoy learning"
+
+        image.style.cursor = "pointer"
+
+        image.addEventListener("click", function() {
+            window.location.href = "http://www.en.kku.ac.th/"
+        })
+    </script>
+
+</body>
+
+</html>
